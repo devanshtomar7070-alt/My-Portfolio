@@ -1,12 +1,13 @@
 import "./styles/Work.css";
 import WorkImage from "./WorkImage";
+import { useRef } from "react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(useGSAP);
 
 const Work = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
   useGSAP(() => {
   let translateX: number = 0;
 
@@ -35,19 +36,13 @@ const Work = () => {
     },
   });
 
-  timeline.to(".work-flex", {
-    x: -translateX,
-    ease: "none",
-  });
-
-  // Clean up (optional, good practice)
-  return () => {
-    timeline.kill();
-    ScrollTrigger.getById("work")?.kill();
-  };
-}, []);
+    timeline.to(".work-flex", {
+      x: -translateX,
+      ease: "none",
+    });
+  }, { scope: containerRef });
   return (
-    <div className="work-section" id="work">
+    <div className="work-section" id="work" ref={containerRef}>
       <div className="work-container section-container">
         <h2>
           My <span>Work</span>
@@ -77,3 +72,4 @@ const Work = () => {
 };
 
 export default Work;
+
