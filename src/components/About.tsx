@@ -6,9 +6,7 @@ const About = () => {
       <div className="about-me">
         <h3 className="title">About Me</h3>
         <p className="para">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-          dolores numquam iusto Ratione earum ducimus autem id iure pariatur
-          dolorum quae maiores.
+          I'm Devansh Singh Tomar, a Computer Science & Engineering undergraduate at Lovely Professional University. I am passionate about software development, algorithmic problem solving, and building scalable web applications. With hands-on experience in C++, Python, JavaScript, and database systems, I focus on writing clean, modular code and creating efficient digital solutions.
         </p>
       </div>
     </div>
