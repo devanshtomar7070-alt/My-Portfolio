@@ -50,10 +50,13 @@ const Contact = () => {
           </div>
           <div className="contact-box">
             <h2>
-              Designed and Developed <br /> by <span>Devansh Singh Tomar</span>
+              Designed <br /> by <span>Devansh Singh Tomar</span>
             </h2>
             <h5>
               <MdCopyright /> 2026
+            </h5>
+            <h5 style={{ fontSize: "14px", fontWeight: 400, marginTop: "6px" }}>
+              Original Creator / Developer: MoncyDev
             </h5>
           </div>
         </div>
